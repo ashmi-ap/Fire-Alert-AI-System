@@ -1,97 +1,103 @@
-# Fire-Alert-AI-System
-<div align="center">
-🔥 FireGuard
 
-An AI-powered fire detection system that uses real-time sensor data to detect fire and alert users via hardware (buzzer) and software (Flutter app – in progress). Built using Edge Impulse for ML deployment on ESP32.
 
-</div>
-🔍 Project Overview
 
-This project integrates Edge AI, IoT hardware, and mobile development to provide a low-cost, scalable fire detection solution. It’s built with modularity in mind, so hardware and software work both independently and together.
 
-📌 Project Status
-✅ Completed
 
-Sensor integration with ESP32
+# 🔥 FireGuard
 
-AI model training & on-device inference
+An AI-powered fire detection system that uses real-time sensor data to detect fire and alert users via hardware (buzzer) and software (Flutter app - in progress). Built using Edge Impulse for ML deployment on ESP32.
 
-Buzzer alerts based on AI predictions
+---
 
-Clean and documented code structure
+## 🔍 Project Overview
 
-🚧 In Progress
+This project integrates *Edge AI, **IoT hardware, and **mobile development* to provide a low-cost, scalable fire detection solution. It’s built with modularity in mind, so hardware and software work both independently and together.
 
-Flutter app for real-time status and mobile alerts
+✅ *Completed:*
+- Sensor integration with ESP32
+- AI model training & on-device inference
+- Buzzer alerts based on AI predictions
+- Clean and documented code structure
 
-Firebase integration for syncing and storing alerts
+🚧 *In Progress:*
+- Flutter app for real-time status and mobile alerts
+- Firebase integration for syncing and storing alerts
+- Push notifications via Firebase Cloud Messaging (FCM)
 
-Push notifications via Firebase Cloud Messaging (FCM)
+🎯 *Goal:* A complete end-to-end fire detection system for home/industry safety with app monitoring and instant alerts.
 
-🎯 Goal
+---
 
-A complete end-to-end fire detection system for home/industry safety with app monitoring and instant alerts.
+## 🌟 Features
 
-🌟 Features
+- AI-based fire detection using Edge Impulse
+- Real-time sensor data processing on ESP32
+- Immediate buzzer alerts
+- Flutter app (upcoming) for remote monitoring and alerts
+- Modular hardware-software architecture
 
-AI-based fire detection using Edge Impulse
+---
 
-Real-time sensor data processing on ESP32
+## 🧠 Sensors Used
 
-Immediate buzzer alerts
+- *MQ-2* – Gas & Smoke Sensor  
+- *DHT22* – Temperature & Humidity Sensor  
+- *IR Proximity Sensor* – (Optional)
 
-Flutter app (upcoming) for remote monitoring and alerts
+---
 
-Modular hardware-software architecture
+## ⚙ Edge Impulse CLI Setup
 
-🧠 Sensors Used
+1. *Install Node.js* → [https://nodejs.org](https://nodejs.org)  
+2. *Install Edge Impulse CLI*  
+   ```bash
+   npm install -g edge-impulse-cli
 
-MQ-2 – Gas & Smoke Sensor
+3. Login & Connect Device
 
-DHT22 – Temperature & Humidity Sensor
-
-IR Proximity Sensor – (Optional)
-
-⚙️ Edge Impulse CLI Setup
-Install Node.js
-
-👉 https://nodejs.org
-
-Install Edge Impulse CLI
-npm install -g edge-impulse-cli
-
-Login & Connect Device
 edge-impulse-daemon
 
-Stream Sensor Data
-edge-impulse-data-forwarder
 
+4. Stream Sensor Data
+
+edge-impulse-data-forwarder
 
 Map sensor data to features in the browser
 
-Model Training
+
+
+5. Model Training
 
 Use Edge Impulse Studio to collect data, train, and test
 
-Deploy
 
-Export Arduino library
 
-Import into Arduino IDE
+6. Deploy
 
-Upload to ESP32
+Export Arduino library → Import into Arduino IDE → Upload to ESP32
+
+
+
+
+
+---
 
 🚀 How It Works
 
-ESP32 reads live data from sensors
+ESP32 reads live data from sensors.
 
-AI model (from Edge Impulse) predicts fire presence
+AI model (from Edge Impulse) predicts fire presence.
 
 If fire is detected:
 
 Buzzer activates
 
 (Later) App notifies user via push notification
+
+
+
+
+---
 
 📱 App Integration (Upcoming)
 
@@ -105,7 +111,8 @@ Send mobile push alerts using FCM
 
 Show buzzer status, timestamps, and event logs
 
-🧩 Planned Stack
+
+Planned Stack
 
 Flutter for UI
 
@@ -115,9 +122,15 @@ FCM for notifications
 
 Provider or Riverpod for state management
 
+
+
+---
+
 📦 Project Structure
-├── hardware/        # ESP32 + Arduino code
-├── edge-impulse/    # ML model files & deployment
-├── flutter-app/     # Flutter code (to be added)
-├── docs/            # Images, schematics, logs
+
+├── hardware/           # ESP32 + Arduino code
+├── edge-impulse/       # ML model files & deployment
+├── flutter-app/        # Flutter code (to be added)
+├── docs/               # Images, schematics, logs
 └── README.md
+
